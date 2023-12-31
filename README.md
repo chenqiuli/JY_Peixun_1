@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+## 前端-react 和 ant design 入门
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 一、React 介绍
 
-## Available Scripts
+#### 1、React 的特性与发展
 
-In the project directory, you can run:
+- （1）React 起源与发展：2013 年 5 月起源于 Facebook，用于创建用户界面的 JavaScript 库。
 
-### `npm start`
+- （2）React 的特性
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - 高效：React 通过对虚拟 dom，减少与 Dom 的交互
+  - JSX：JavaScript 语法的扩展，使用 JSX 语法在 render 中创建 dom，提高代码可读性
+  - 组件化：通过 React 构建组件，使代码更容易得到复用
+  - 单向数据流：数据流向只能从父组件流向子组件，子组件通过回调函数将数据传递回父组件
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- （3）虚拟 dom：
+  - <font color="red">画图</font>
 
-### `npm test`
+### 二、React 基础
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1、如何创建第一个 react 项目
 
-### `npm run build`
+- （1）全局安装
+  ```bash
+  npm i -g create-react-app
+  create-react-app myproject
+  ```
+  - PS：如遇全局安装失败，执行`npm prefix -g`检测 npm 的 node_modules 的 bin 目录，将其 bin 路径添加至系统环境电脑 path 中即可。
+- （2）临时安装
+  ```bash
+  npx create-react-app myproject
+  ```
+    - PS：`npx`可以避免全局模块安装，而直接执行 npm 的 node_modules 的 bin 目录下的命令
+- （2）JSX 语法
+- （3）组件样式
+- （4）数据绑定
+- （5）条件渲染
+- （6）列表渲染
+- （7）事件绑定
+- （8）使用 hooks
+- （9）表单受控
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 三、实践演练一
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- TodoList 练习，涉及到第二点所有知识，源代码如下：
+-
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 四、React 进阶
 
-### `npm run eject`
+- （1）组件化开发
+- （2）组件通信方式
+- （3）组件路由
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 五、实践演练二
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- TodoList 案例列表页跳转详情页带参数，组件复用 demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 六、Antd Design & ProComponent
+- （1）介绍文档
+- （2）介绍常用的蚂蚁组件，代码演示
+- （3）如何修改蚂蚁的样式，特殊的有Modal，Drawer
+- Antd Design与Procomponent
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 七、总结
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 八、答疑
