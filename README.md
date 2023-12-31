@@ -23,19 +23,143 @@
 - （1）全局安装
   ```bash
   npm i -g create-react-app
-  create-react-app myproject
+  create-react-app myproject --template typeScript
   ```
   - PS：如遇全局安装失败，执行`npm prefix -g`检测 npm 的 node_modules 的 bin 目录，将其 bin 路径添加至系统环境电脑 path 中即可。
 - （2）临时安装
   ```bash
-  npx create-react-app myproject
+  npx create-react-app myproject --template typeScript
   ```
-    - PS：`npx`可以避免全局模块安装，而直接执行 npm 的 node_modules 的 bin 目录下的命令
-- （2）JSX 语法
-- （3）组件样式
-- （4）数据绑定
+  - PS：`npx`可以避免全局模块安装，而直接执行 npm 的 node_modules 的 bin 目录下的命令
+- （2）函数式组件：
+
+  ```tsx
+  import ReactDOM from "react-dom/client";
+  const App = () => <h1>Hello World</h1>;
+  const root = ReactDOM.createRoot(
+    document.getElementById("root") as HTMLElement
+  );
+  root.render(<App />);
+  ```
+
+  - PS：组件名必须大写。
+
+- （3）JSX 语法：JSX 是 JavaScript 语法的扩展，它可以让我们在 JavaScript 中编写类似 HTML 的代码。
+
+- 原始写法：
+
+```jsx
+React.createElement(
+  "div",
+  {
+    id: "aaa",
+    style: {
+      width: 200,
+      height: 200,
+      background: "yellow",
+    },
+  },
+  [
+    React.createElement("p", { id: "bbb" }, 111),
+    React.createElement("p", { id: "ccc" }, 222),
+  ]
+);
+```
+
+- 现代写法：
+
+```jsx
+<div
+  id="aaa"
+  style={{
+    width: 200,
+    height: 200,
+    background: "yellow",
+  }}
+>
+  <p id="bbb">111</p>
+  <p id="ccc">222</p>
+</div>
+```
+
+- （4）在 JSX 中使用 JavaScript 表达式
+
+  - 三元运算符
+  - 变量
+  - 函数调用
+  - 对象
+  - 作为属性变量
+
+  ```jsx
+  import moment from "moment";
+  import React from "react";
+
+  const formatDate = (val: Date) => {
+    return moment(val).format("YYYY-MM-DD");
+  };
+
+  export default function App2() {
+    const name = "张三";
+    const style = { color: "green" };
+
+    return (
+      <>
+        <div>{2 > 1 ? "真" : "假"}</div>
+        <div>{name}</div>
+        <div>{formatDate(new Date())}</div>
+        <div style={{ color: "blue" }}>Hello World1</div>
+        <div style={style}>Hello World2</div>
+        <img
+          src={
+            "https://th.bing.com/th/id/OIP.duz6S7Fvygrqd6Yj_DcXAQHaF7?w=198&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+          }
+          alt=""
+        />
+      </>
+    );
+  }
+  ```
+
 - （5）条件渲染
+
+  ```jsx
+  import React from "react";
+
+  export default function App3() {
+    return 3 < 2 ? <div>有内容</div> : <div>空空如也</div>;
+  }
+  ```
+
 - （6）列表渲染
+
+```jsx
+import React from "react";
+
+export default function App4() {
+  const arr = [
+    {
+      label: "A",
+      value: "1",
+    },
+    {
+      label: "B",
+      value: "2",
+    },
+    {
+      label: "C",
+      value: "3",
+    },
+  ];
+  return (
+    <div>
+      {arr.map((item) => {
+        return <div key={item.value}>{item.label}</div>;
+      })}
+    </div>
+  );
+}
+```
+
 - （7）事件绑定
 - （8）使用 hooks
 - （9）表单受控
@@ -43,7 +167,7 @@
 ### 三、实践演练一
 
 - TodoList 练习，涉及到第二点所有知识，源代码如下：
--
+
 
 ### 四、React 进阶
 
@@ -56,10 +180,11 @@
 - TodoList 案例列表页跳转详情页带参数，组件复用 demo
 
 ### 六、Antd Design & ProComponent
+
 - （1）介绍文档
 - （2）介绍常用的蚂蚁组件，代码演示
-- （3）如何修改蚂蚁的样式，特殊的有Modal，Drawer
-- Antd Design与Procomponent
+- （3）如何修改蚂蚁的样式，特殊的有 Modal，Drawer
+- Antd Design 与 Procomponent
 
 ### 七、总结
 

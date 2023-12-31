@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import App1 from "./02-react基础/1-JSX语法";
+import App2 from "./02-react基础/2-在 JSX 中使用 JavaScript 表达式";
+import App3 from "./02-react基础/3-条件渲染";
+import App4 from "./02-react基础/4-列表渲染";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <App1 />
+      <App2 />
+      <App3 />
+      <App4 />
     </div>
   );
 }
