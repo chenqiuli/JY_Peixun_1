@@ -12,8 +12,8 @@ export default function App1() {
       },
     },
     [
-      React.createElement("p", { id: "bbb" }, 111),
-      React.createElement("p", { id: "ccc" }, 222),
+      React.createElement("p", { id: "bbb", key: "bbb" }, 111),
+      React.createElement("p", { id: "ccc", key: "ccc" }, 222),
     ]
   );
 
