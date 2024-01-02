@@ -1,0 +1,15 @@
+.myForm {
+  border: 1px solid red;
+}
+
+/* × */
+/* .myModal .modalWrap {
+  width: 200px;
+  height: 200px; */
+/* } */
+
+/* √ */
+.modalWrap {
+  width: 200px;
+  height: 200px;
+}

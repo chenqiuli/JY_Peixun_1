@@ -3,15 +3,18 @@
     "data": [
       {
         "id": 1,
-        "title": "test1"
+        "title": "学react",
+        "content": "详情内容一"
       },
       {
         "id": 2,
-        "title": "test2"
+        "title": "学vue",
+        "content": "详情内容二"
       },
       {
         "id": 3,
-        "title": "test1-1"
+        "title": "学angular",
+        "content": "详情内容三"
       }
     ]
   }

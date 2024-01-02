@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 interface GlobalContextProps {
   info?: string;
@@ -47,34 +47,25 @@ interface ListItemProps {
 
 const ListItem = (props: ListItemProps) => {
   const { item } = props;
+  const { setinfo } = useContext(GlobalContext);
   return (
-    <GlobalContext.Consumer>
-      {(value) => {
-        console.log(value, "aksdk");
-        return (
-          <div
-            style={{
-              width: 100,
-              height: 100,
-              margin: 8,
-              border: "1px solid #ccc",
-            }}
-            onClick={() => {
-              value.setinfo?.(item.title);
-            }}
-          >
-            {item.title}
-          </div>
-        );
+    <div
+      style={{
+        width: 100,
+        height: 100,
+        margin: 8,
+        border: "1px solid #ccc",
       }}
-    </GlobalContext.Consumer>
+      onClick={() => {
+        setinfo?.(item.title);
+      }}
+    >
+      {item.title}
+    </div>
   );
 };
 
 const ListDetail = () => {
-  return (
-    <GlobalContext.Consumer>
-      {(value) => <div>ListDetail- {value.info}</div>}
-    </GlobalContext.Consumer>
-  );
+  const { info } = useContext(GlobalContext);
+  return <div>ListDetail- {info} - 哈哈哈</div>;
 };

@@ -13,6 +13,12 @@ import App10 from "./02-react基础/6-使用hooks/useRef2";
 import App11 from "./02-react基础/6-使用hooks/useEffect2";
 import App12 from "./02-react基础/6-使用hooks/useContext";
 import Home from "./04-react进阶/Home";
+import App13 from "./02-react基础/7-表单受控";
+import TodoList2 from "./05-案例2/TodoList2";
+import Antd1 from "./06-antd+案例/1-Button";
+import Antd2 from "./06-antd+案例/2-Form";
+import Antd3 from "./06-antd+案例/3-Modal";
+import Antd4 from "./06-antd+案例/4-Tag";
 
 function App() {
   return (
@@ -29,10 +35,17 @@ function App() {
       <App8 />
       <App9 />
       <App10 /> 
-      <App12 /> */}
+      <App12 />  
+      <App13 /> */}
       {/* <Todolist /> */}
       {/* <h2>进阶</h2> */}
-      <Home />
+      {/* <Home /> */}
+      {/* <TodoList2 /> */}
+      <h2>Antd</h2>
+      <Antd1 />
+      <Antd2 />
+      <Antd3 />
+      <Antd4 />
     </div>
   );
 }
