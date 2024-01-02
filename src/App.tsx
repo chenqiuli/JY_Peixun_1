@@ -40,12 +40,12 @@ function App() {
       {/* <Todolist /> */}
       {/* <h2>进阶</h2> */}
       {/* <Home /> */}
-      {/* <TodoList2 /> */}
-      <h2>Antd</h2>
-      <Antd1 />
+      <TodoList2 />
+      {/* <h2>Antd</h2> */}
+      {/* <Antd1 />
       <Antd2 />
       <Antd3 />
-      <Antd4 />
+      <Antd4 /> */}
     </div>
   );
 }

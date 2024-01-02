@@ -46,7 +46,7 @@ export default function Todolist() {
             setvalue("");
           }}
         >
-          确定
+          增加
         </button>
       </div>
       <ul>

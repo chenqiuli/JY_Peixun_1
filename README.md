@@ -44,40 +44,24 @@ root.render(<App />);
 
 #### 3、JSX 语法：JSX 是 JavaScript 语法的扩展，它可以让我们在 JavaScript 中编写类似 HTML 的代码。
 
-- 原始写法：
-
 ```jsx
-React.createElement(
-  "div",
-  {
-    id: "aaa",
-    style: {
-      width: 200,
-      height: 200,
-      background: "yellow",
-    },
-  },
-  [
-    React.createElement("p", { id: "bbb" }, 111),
-    React.createElement("p", { id: "ccc" }, 222),
-  ]
-);
-```
+import React from "react";
 
-- 现代写法：
-
-```jsx
-<div
-  id="aaa"
-  style={{
-    width: 200,
-    height: 200,
-    background: "yellow",
-  }}
->
-  <p id="bbb">111</p>
-  <p id="ccc">222</p>
-</div>
+export default function App1() {
+  return (
+    <div
+      id="aaa"
+      style={{
+        width: 200,
+        height: 200,
+        background: "yellow",
+      }}
+    >
+      <p id="bbb">111</p>
+      <p id="ccc">222</p>
+    </div>
+  );
+}
 ```
 
 #### 4、在 JSX 中使用 JavaScript 表达式

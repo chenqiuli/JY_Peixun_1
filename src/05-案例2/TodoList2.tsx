@@ -16,7 +16,7 @@ export default function TodoList2() {
   }, []);
 
   return (
-    <GlobalContext.Provider
+    <GlobalContext.Provider // 改成父子通信
       value={{
         value,
         setvalue,
