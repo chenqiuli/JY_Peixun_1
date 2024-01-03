@@ -1,4 +1,5 @@
-import { ListType } from "../TodoList2";
+import { Button } from "antd";
+import { ListType } from "../TodoList3";
 
 interface ListItemProps {
   item: ListType;
@@ -21,14 +22,14 @@ export default function ListItem(props: ListItemProps) {
       }}
     >
       <span style={{ marginRight: 8 }}>{`${item.title}`}</span>
-      <button
+      <Button
         onClick={() => {
           const newList = [...list].filter((ele) => ele.id !== item.id);
           setlist(newList);
         }}
       >
         删除
-      </button>
+      </Button>
     </li>
   );
 }

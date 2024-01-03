@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ListItem from "./components/ListItem";
-import EmptyList from "./components/EmptyList";
+import { Button, Empty, Input } from "antd"; // 按需加载
 
 export type ListType = { id: number; title: string };
 
-export default function TodoList2() {
+export default function TodoList3() {
   const [list, setlist] = useState<ListType[]>([]);
   const [value, setvalue] = useState("");
 
@@ -18,14 +18,14 @@ export default function TodoList2() {
   return (
     <>
       <div>
-        <input
-          type="text"
+        <Input
           value={value}
           onChange={(e) => {
             setvalue(e.target.value);
           }}
+          size="middle"
         />
-        <button
+        <Button
           onClick={() => {
             const newList = [...list]; // 不可对原对象进行修改，需要深拷贝一个
             newList.unshift({
@@ -35,9 +35,10 @@ export default function TodoList2() {
             setlist(newList);
             setvalue("");
           }}
+          type="primary"
         >
-          确定
-        </button>
+          增加
+        </Button>
       </div>
       <ul>
         {list.map((item) => {
@@ -45,7 +46,7 @@ export default function TodoList2() {
             <ListItem key={item.id} item={item} list={list} setlist={setlist} />
           );
         })}
-        {!list.length && <EmptyList />}
+        {!list.length && <Empty />}
       </ul>
     </>
   );
